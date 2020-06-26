@@ -1,11 +1,11 @@
 <template>
   <div class="ui secondary pointing menu">
-    <router-link :to="{name : 'ImageList'}" class="active item">Imgur Uploadery</router-link>
+    <router-link :to="{name : 'ImageList'}" class="active item">Imgur Uploader</router-link>
     <div class="right menu">
       <div class="horizontal" v-if="isLoggedIn">
         <router-link :to="{name : 'ImageList'}" class="item">Gallery</router-link>
         <router-link :to="{name : 'UploadForm'}" class="item">Upload</router-link>
-        <a class="item">Logout</a>
+        <a class="item" @click="logout">Logout</a>
       </div>
       <div v-else>
         <a class="item" @click="login">Login</a>

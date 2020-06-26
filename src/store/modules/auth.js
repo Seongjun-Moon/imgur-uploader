@@ -18,6 +18,7 @@ const actions = {
     // state.token 값 null로 바꾸기
     commit("setToken", null); //mutations의 setToken 함수 불러오기
     cookies.remove("imgur_token");
+    location.pathname = "/";
   },
   login() {
     const ROOT_URL = "https://api.imgur.com";
